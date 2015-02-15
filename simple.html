@@ -41,13 +41,15 @@
 
   </head>
 
-  <body>
+  <body ng-conroller="SimpleCtrl">
     
-    <div ng-view></div>
-
-    <a href="./simple.html">Simple Example</a>
-
-    <a ui-sref="./animation.html">Animation Example</a>
+    <div class="ui form segment" style="width:400px">
+      <div class="field">
+        <label for="name"><h2>What is your name?</h2></label>
+        <input type="text" id="name" ng-model="name" style="width:90%" />
+      </div>
+      <repeater></repeater>
+    </div>
     
   </body>
 
