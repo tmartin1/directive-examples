@@ -38,14 +38,14 @@
     <script src="simple.js"></script>
   </head>
 
-  <body>
-  <div id="iframe-container" ng-app="exampleApp">
+  <body ng-app="simpleApp">
+  <div id="iframe-container" ng-conroller="SimpleCtrl">
 
-    <div id="demo" ng-conroller="SimpleCtrl" class="ui form segment">
+    <div id="demo" class="ui form segment">
       <div class="field" style="margin:20px">
         <label for="name"><h2>What is your name?</h2></label>
         <input type="text" id="name" ng-model="name" placeholder="Enter your name here"/>
-        <repeater></repeater>
+        <copycat></copycat>
       </div>
     </div>
     

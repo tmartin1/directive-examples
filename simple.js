@@ -1,14 +1,14 @@
 'use strict';
 
-angular.module('exampleApp', [])
+angular.module('simpleApp', [])
 
 .controller('SimpleCtrl', function($scope) {
   $scope.name;
 })
 
-.directive('repeater', function() {
+.directive('copycat', function() {
   return {
-    replace: false,
+    replace: true,
     restrict: 'E',
     template: '<h3>Your name is: {{name}}</h3>'
   }
