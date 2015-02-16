@@ -38,18 +38,16 @@
     <script src="animation.js"></script>
   </head>
 
-  <body>
-  <div id="iframe-container" ng-app="exampleApp">
+  <body ng-app="animationApp">
+    <div id="iframe-container" ng-conroller="AnimationCtrl">
 
-    <div id="demo" ng-conroller="AnimationCtrl" class="ui form segment">
-      <div class="field" style="margin:20px">
-        <label for="name"><h2>What is your name?</h2></label>
-        <input type="text" id="name" ng-model="name" style="width:90%" />
+      <div id="demo" class="ui form segment">
+          <div ng-repeat="slide in slideText">
+            <animator></animator>
+          </div>
       </div>
-      <animator></animator>
+      
     </div>
-    
-  </div>
   </body>
 
 </html>

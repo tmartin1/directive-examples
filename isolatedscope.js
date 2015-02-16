@@ -14,7 +14,7 @@ angular.module('scopingApp', [])
       binding:'=',
       query: '='
     }, // Creates an independent scope for this directive, idenpendent of the parent scope.
-    replace:false,
+    replace: false,
     restrict: 'AE',
     template: '\
       <h3>{{query.question}}</h3> \

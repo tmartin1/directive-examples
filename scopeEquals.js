@@ -14,7 +14,7 @@ angular.module('scopeEqualsApp', [])
       binding:'=',
       query: '='
     },
-    replace:false,
+    replace: false,
     restrict: 'AE',
     template: '\
       <h3>{{query.question}}</h3> \

@@ -1,16 +1,19 @@
 'use strict';
 
-angular.module('exampleApp', [])
+angular.module('animationApp', [])
 
 .controller('AnimationCtrl', function($scope) {
-  $scope.name = 'Flash Gordon';
+  $scope.slideText = [
+    'This is the first slide.<br>Click "next" to go to the next slide.',
+    'This is the second slide.<br>Click "previous" to go to the previous slide.'
+  ];
 })
 
 .directive('animator', function() {
   return {
-    replace: false,
+    replace: true,
     restrict: 'E',
-    template: '<h3>Your name is: {{name}}</h3>',
+    templateUrl: './animationTemplate.html',
     link: function() {
       //
     }
