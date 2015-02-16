@@ -1,9 +1,10 @@
-angular.module('scopingApp', [])
+angular.module('scopeEqualsApp', [])
 
-.controller('ScopingCtrl', function($scope) {
+.controller('ScopeEqualsCtrl', function($scope) {
+  $scope.user = { name:'Default Name', age:'Default Age' };
   $scope.query = [
-    { question: 'What is your name?', text:'Your name is: ' },
-    { question: 'How old are you?', text:'Your age is: ' }
+    { question: 'What is your name?', text:'Your name is: ' , model:'Default Name' },
+    { question: 'How old are you?', text:'Your age is: ' , model:'Default Age' }
   ];
 })
 
