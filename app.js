@@ -1,3 +1,4 @@
-'use strict';
+// 'use strict';
 
-var app = angular.module('exampleApp');
+// var app = angular.module('exampleApp');
+

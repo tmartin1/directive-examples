@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="exampleApp">
+<html>
 
   <head>
     <meta charset="utf-8" />
@@ -35,21 +35,21 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.8.1/components/api.min.js"></script>
 
     <!-- App Scripts -->
-    <script src="app.js"></script>
     <script src="simple.js"></script>
-    <script src="animation.js"></script>
   </head>
 
-  <body ng-conroller="SimpleCtrl">
-    
-    <div class="ui form segment" style="width:400px; margin-right:auto; margin-left:auto;">
-      <div class="field">
+  <body>
+  <div id="iframe-container" ng-app="exampleApp">
+
+    <div id="demo" ng-conroller="SimpleCtrl" class="ui form segment">
+      <div class="field" style="margin:20px">
         <label for="name"><h2>What is your name?</h2></label>
         <input type="text" id="name" ng-model="name" style="width:90%" />
       </div>
       <repeater></repeater>
     </div>
     
+  </div>
   </body>
 
 </html>

@@ -1,12 +1,14 @@
 'use strict';
 
-app.controller('SimpleCtrl', function($scope) {
-  $scope.name = 'Flash Gordon';
-});
+angular.module('exampleApp', [])
 
-app.directive('repeater',function(){
+.controller('SimpleCtrl', function($scope) {
+  $scope.name = 'Flash Gordon';
+})
+
+.directive('repeater', function() {
   return {
-    replace:false,
+    replace: false,
     restrict: 'E',
     template: '<h3>Your name is: {{name}}</h3>'
   }

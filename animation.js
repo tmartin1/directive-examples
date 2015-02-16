@@ -1,13 +1,14 @@
 'use strict';
 
-angular.module('exampleApp')
+angular.module('exampleApp', [])
+
 .controller('AnimationCtrl', function($scope) {
   $scope.name = 'Flash Gordon';
-});
+})
 
-app.directive('animator',function(){
+.directive('animator', function() {
   return {
-    replace:false,
+    replace: false,
     restrict: 'E',
     template: '<h3>Your name is: {{name}}</h3>',
     link: function() {
