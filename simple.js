@@ -3,7 +3,7 @@
 angular.module('exampleApp', [])
 
 .controller('SimpleCtrl', function($scope) {
-  $scope.name = 'Flash Gordon';
+  $scope.name;
 })
 
 .directive('repeater', function() {
