@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>AngularJS Directive Examples</title>
+    <title>AngularJS Directive: Simple Example</title>
 
     <!-- Vendor Scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -33,20 +33,24 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.8.1/components/checkbox.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.8.1/components/api.min.js"></script>
 
+    <!-- App Scripts -->
+    <script src="isolatedscope.js"></script>
   </head>
 
-  <body>
+  <body ng-app="scopingApp">
     
-    <a href="./simple.html">Simple Example</a><br><br>
+    <div id="iframe-container" ng-controller="ScopingCtrl">
 
-    <a href="./isolatedscope.html">Isolated Scope Example</a><br><br>
-    
-    <a href="./scopeEquals.html">Shared Scope Example with '='</a><br><br>
-
-    <a href="./dynamic.html">Dynamic Example</a><br><br>
-
-    <a href="./animation.html">Animation Example</a><br><br>
-    
+      <div id="demo" class="ui form segment">
+        <question query="query[0]"></question>
+        <question query="query[1]"></question>
+        <hr>
+        <h2>From parent scope:</h2>
+        <h3>user.name is: {{user.name}}</h3>
+        <h3>user.age is: {{user.age}}</h3>
+      </div>
+      
+    </div>
   </body>
 
 </html>
