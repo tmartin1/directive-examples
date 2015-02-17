@@ -42,7 +42,7 @@
     <div id="iframe-container" ng-controller="DynamicCtrl">
 
       <div id="demo" class="ui form segment">
-        <repeater ng-repeat="item in items" item="item" binding="item.bindTo"></repeater>
+        <questions queries="queries" user="user"></questions>
         <hr>
         <h2>From parent scope:</h2>
         <h3>user.name is: {{user.name}}</h3>
