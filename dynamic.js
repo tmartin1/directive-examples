@@ -35,7 +35,7 @@ angular.module('dynamicApp', [])
       query: '=',
       user: '='
     },
-    templateUrl: './dynamic-template.html'
+    templateUrl: './dynamicTemplate.html'
   };
 })
 
