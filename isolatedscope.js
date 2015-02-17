@@ -1,10 +1,10 @@
-angular.module('scopingApp', [])
+angular.module('isolatedScopeApp', [])
 
-.controller('ScopingCtrl', function($scope) {
-  $scope.user = { name:'Default Name', age:'Default Age' };
+.controller('IsolatedScopeCtrl', function($scope) {
+  $scope.user = { name:'Flash Gordon', age:'26' };
   $scope.query = [
-    { question: 'What is your name?', text:'Your name is: ' , model:'Default Name' },
-    { question: 'How old are you?', text:'Your age is: ' , model:'Default Age' }
+    { question: 'What is your name?', text:'Your name is: ' , model:'Flash Gordon' },
+    { question: 'How old are you?', text:'Your age is: ' , model:'26' }
   ];
 })
 
@@ -13,9 +13,8 @@ angular.module('scopingApp', [])
     scope: {
       binding:'=',
       query: '='
-    }, // Creates an independent scope for this directive, idenpendent of the parent scope.
-    replace: false,
-    restrict: 'AE',
+    },
+    restrict: 'E',
     template: '\
       <h3>{{query.question}}</h3> \
       <input type="text" ng-model="query.model"/> \
