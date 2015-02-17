@@ -6,7 +6,7 @@ angular.module('dynamicApp', [])
   $scope.user = { name:'Flash Gordon', age:'26', sex:'male' };
   $scope.queries = [
     { title: 'name', question: 'What is your name? ', bind: 'name', type: 'text' },
-    { title: 'age', question: 'What is your age? ', bind: 'age', type: 'text' }
+    { title: 'age', question: 'What is your age? ', bind: 'age', type: 'select', options: (function(){ var list = []; for (var i = 18; i <= 100; i++) { list.push(i); } return list; })() }
   ];
 })
 
@@ -16,10 +16,6 @@ angular.module('dynamicApp', [])
     scope: {
       queries:'=',
       user: '='
-    },
-    controller: function($scope) {
-      console.log($scope);
-      // this.template = templates[$scope.query.type];
     },
     template: ' \
       <my-tabs> \
@@ -39,7 +35,7 @@ angular.module('dynamicApp', [])
       query: '=',
       user: '='
     },
-    templateUrl: 'dynamic-template.html'
+    templateUrl: './dynamic-template.html'
   };
 })
 
@@ -64,7 +60,7 @@ angular.module('dynamicApp', [])
         panes.push(pane);
       };
     },
-    templateUrl: 'dynamic-tabs.html'
+    templateUrl: './dynamic-tabs.html'
   };
 })
 
