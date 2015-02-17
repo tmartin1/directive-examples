@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('animationApp', [])
+angular.module('dynamicApp', [])
 
-.controller('AnimationCtrl', function($scope) {
+.controller('DynamicCtrl', function($scope) {
   $scope.user = { name:'Flash Gordon', age:'26', sex:'male' };
   $scope.queries = [
     { title: 'name', question: 'What is your name? ', bind: 'name', type: 'text' },
@@ -35,7 +35,7 @@ angular.module('animationApp', [])
       query: '=',
       user: '='
     },
-    templateUrl: './animationTemplate.html'
+    templateUrl: './dynamicTemplate.html'
   };
 })
 
@@ -77,6 +77,7 @@ angular.module('animationApp', [])
     template: '<div class="tab-pane" ng-show="selected" ng-transclude></div>'
   };
 });
+
 
 
 
