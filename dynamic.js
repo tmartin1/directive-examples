@@ -18,12 +18,12 @@ angular.module('dynamicApp', [])
       user: '='
     },
     template: ' \
-      <my-tabs> \
+      <menu> \
         <my-pane ng-repeat="query in queries" title="{{query.title}}"> \
           <h4>{{query.question}}</h4> \
           <question query="query" user="user" ng-model="user[query.bind]"></question> \
         </my-pane> \
-      </my-tabs>'
+      </menu>'
   };
 })
 
@@ -39,7 +39,7 @@ angular.module('dynamicApp', [])
   };
 })
 
-.directive('myTabs', function() {
+.directive('menu', function() {
   return {
     restrict: 'E',
     transclude: true,
@@ -52,7 +52,6 @@ angular.module('dynamicApp', [])
         });
         pane.selected = true;
       };
-
       this.addPane = function(pane) {
         if (panes.length === 0) {
           $scope.select(pane);
@@ -66,7 +65,7 @@ angular.module('dynamicApp', [])
 
 .directive('myPane', function() {
   return {
-    require: '^myTabs',
+    require: '^menu',
     restrict: 'E',
     transclude: true,
     scope: {
